@@ -1,0 +1,61 @@
+Ali Haider
+Co-founder & CTO at Frellectra AI
+
+Ali Haider is a 17-year-old entrepreneur and technology enthusiast currently serving as the Co-founder and CTO at Frellectra AI, providing Agentic AI and Cyber security solutions for all types of industries.
+
+Frellectra AI
+Co-founder & CTO
+Jan 2023 - Present (1 year 9 months)
+Islamabad, Pakistan
+
+• Leading the technical vision and strategy for the company
+• Overseeing the development of Agentic AI solutions
+• Managing the cyber security division
+• Developing custom RAG applications for clients
+• Implementing voice agent AI systems
+• Directing web and app development projects
+
+Education
+
+Intermediate Student
+2023 - Present
+
+Skills
+
+• Agentic AI
+• Retrieval-Augmented Generation (RAG)
+• Voice Agent AI
+• Web Development
+• App Development
+• Cyber Security
+• Business Development
+• Python
+• JavaScript
+• React
+• Node.js
+• LangChain
+• FastAPI
+• Docker
+
+Projects
+
+AI-Powered Voice Assistant
+Developed an advanced voice assistant that uses natural language processing to understand and respond to user queries. The assistant can perform tasks such as setting reminders, answering questions, and controlling smart home devices.
+
+RAG Application Framework
+Created a comprehensive framework for building Retrieval-Augmented Generation applications that combine the power of large language models with custom knowledge bases.
+
+Cyber Security Solutions
+Designed and implemented robust cyber security solutions for businesses, focusing on threat detection, vulnerability assessment, and secure data management.
+
+Recommendations
+
+"Badar is an exceptional young talent with a deep understanding of AI technologies. His work on our RAG application was outstanding, delivering results that exceeded our expectations." - Tech Industry Professional
+
+"Despite his young age, Ali demonstrates remarkable expertise in AI and software development. His leadership at Frellectra AI has been instrumental in delivering high-quality solutions for our business." - Business Client
+
+Contact
+
+Email: badar@lunarstudio.site
+LinkedIn: https://www.linkedin.com/in/badar-abbas/
+Website: https://www.lunarstudio.site/
