@@ -216,6 +216,7 @@ MIT
 1. A Vercel account
 2. Git installed on your local machine
 3. Vercel CLI installed (`npm i -g vercel`)
+4. Python 3.9 or higher installed
 
 ### Environment Variables
 Before deploying, make sure to set up the following environment variables in your Vercel project settings:
@@ -235,21 +236,38 @@ git clone <your-repository-url>
 cd <repository-name>
 ```
 
-2. Install dependencies:
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On Unix or MacOS:
+source venv/bin/activate
+```
+
+3. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Deploy to Vercel:
+4. Deploy to Vercel:
 ```bash
 vercel
 ```
 
-4. Follow the prompts to:
+5. Follow the prompts to:
    - Log in to your Vercel account
    - Select your project
    - Configure your project settings
    - Deploy
+
+### Local Development
+To run the project locally:
+```bash
+# Make sure you're in your virtual environment
+pip install -r requirements.txt
+uvicorn api:app --reload
+```
 
 ### Project Structure
 ```
@@ -258,6 +276,7 @@ vercel
 ├── main.py            # Main application logic
 ├── config.py          # Configuration settings
 ├── requirements.txt   # Python dependencies
+├── runtime.txt        # Python runtime version
 ├── vercel.json        # Vercel configuration
 ├── static/           # Static files (HTML, CSS, JS)
 └── data/             # Data files for the assistant
@@ -271,15 +290,9 @@ vercel
 - `POST /upload-audio`: Upload audio for transcription
 - `POST /text-to-speech`: Convert text to speech
 
-### Local Development
-To run the project locally:
-```bash
-uv run uvicorn api:app --reload
-```
-
 ### Production Deployment
 The project is configured for production deployment on Vercel. The `vercel.json` file includes:
-- Python build configuration
+- Python build configuration with Python 3.9
 - Static file serving
 - Route handling
 - Environment variable setup
@@ -289,6 +302,7 @@ The project is configured for production deployment on Vercel. The `vercel.json`
    - Check if all dependencies are listed in `requirements.txt`
    - Verify environment variables are set correctly
    - Check Vercel build logs for specific errors
+   - Make sure you're using Python 3.9 or higher
 
 2. If the API is not responding:
    - Verify the API key is set correctly
