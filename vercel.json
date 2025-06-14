@@ -6,7 +6,7 @@
             "use": "@vercel/python",
             "config": {
                 "runtime": "python3.9",
-                "buildCommand": "pip install -r requirements.txt"
+                "buildCommand": "pip install --upgrade pip && pip install -r requirements.txt"
             }
         },
         {
@@ -25,6 +25,7 @@
         }
     ],
     "env": {
-        "PYTHONPATH": "."
+        "PYTHONPATH": ".",
+        "PYTHON_VERSION": "3.9"
     }
 } 
