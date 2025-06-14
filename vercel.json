@@ -6,9 +6,10 @@
             "use": "@vercel/python",
             "config": {
                 "runtime": "python3.9",
-                "buildCommand": "pip install --upgrade pip setuptools wheel && pip install -e .",
+                "buildCommand": "python -m pip install --upgrade pip setuptools wheel && python -m pip install -e .",
                 "env": {
-                    "PYTHONUNBUFFERED": "1"
+                    "PYTHONUNBUFFERED": "1",
+                    "PYTHON_VERSION": "3.9"
                 }
             }
         },

@@ -34,3 +34,6 @@ dependencies = [
 
 [tool.setuptools]
 packages = ["."]
+
+[tool.pip]
+python-version = "3.9"
