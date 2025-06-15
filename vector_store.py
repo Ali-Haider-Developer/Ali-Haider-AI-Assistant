@@ -27,8 +27,11 @@ class VectorStore:
         self.embedding_model = get_document_embedding_model()
         self.query_embedding_model = get_embedding_model()
 
+        # Create persist directory if it doesn't exist
+        os.makedirs(self.persist_directory, exist_ok=True)
+
         # Initialize or load the vector store
-        if os.path.exists(self.persist_directory):
+        if os.path.exists(self.persist_directory) and os.listdir(self.persist_directory):
             try:
                 self.vector_store = self.load_vector_store()
                 if self.vector_store is None:
@@ -103,7 +106,7 @@ class VectorStore:
         if self.vector_store is not None:
             try:
                 # Create directory if it doesn't exist
-                os.makedirs(os.path.dirname(self.persist_directory), exist_ok=True)
+                os.makedirs(self.persist_directory, exist_ok=True)
 
                 # Save the vector store
                 self.vector_store.save_local(self.persist_directory)
@@ -123,8 +126,7 @@ class VectorStore:
         try:
             return FAISS.load_local(
                 folder_path=self.persist_directory,
-                embeddings=self.embedding_model,
-                allow_dangerous_deserialization=True  # Only use this with trusted data
+                embeddings=self.embedding_model
             )
         except Exception as e:
             print(f"Error loading vector store: {e}")

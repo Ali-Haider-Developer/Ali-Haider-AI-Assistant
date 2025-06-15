@@ -29,11 +29,13 @@ dependencies = [
     "gTTS==2.5.1",
     "pydub==0.25.1",
     "websockets==12.0",
-    "pyttsx3==2.90"
+    "pyttsx3==2.90",
+    "faiss-cpu==1.7.4",
+    "markdown==3.5.2"
 ]
 
 [tool.setuptools]
-packages = ["."]
+packages = {find = {where = ["."]}}
 
 [tool.pip]
 python-version = "3.9"

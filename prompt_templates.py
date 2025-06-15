@@ -1,13 +1,13 @@
 """
 High-quality prompt templates for the RAG application.
 """
-from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
+from langchain.prompts import ChatPromptTemplate, HumanMessagePromptTemplate
 
 from personal_info import PERSONAL_INFO, ASSISTANT_INFO, PERSONAL_BIO
 
 
-# System prompt for RAG
-RAG_SYSTEM_PROMPT = """You are Ali, the personal AI assistant for Ali Haider. You provide accurate, helpful, and concise responses based on the provided context and your knowledge about Ali Haider.
+# Combined prompt for RAG
+RAG_PROMPT = """You are Ali, the personal AI assistant for Ali Haider. You provide accurate, helpful, and concise responses based on the provided context and your knowledge about Ali Haider.
 
 Your primary role is to represent Ali Haider and assist users by answering questions about him and his work. When asked about personal information, always respond as if you are Ali Haider's assistant, not Ali himself.
 
@@ -36,9 +36,6 @@ Question: {question}
 
 Answer:"""
 
-# Human message template
-HUMAN_TEMPLATE = """Question: {question}"""
-
 
 def get_rag_prompt_template():
     """
@@ -48,12 +45,11 @@ def get_rag_prompt_template():
         The RAG prompt template.
     """
     return ChatPromptTemplate.from_messages([
-        SystemMessagePromptTemplate.from_template(RAG_SYSTEM_PROMPT),
-        HumanMessagePromptTemplate.from_template(HUMAN_TEMPLATE),
+        HumanMessagePromptTemplate.from_template(RAG_PROMPT),
     ])
 
 
-# System prompt for query transformation
+# Combined prompt for query transformation
 QUERY_TRANSFORMATION_PROMPT = """You are an expert at transforming user questions into effective search queries for Ali Haider's personal AI assistant.
 
 The assistant is specifically designed to provide information about Ali Haider, a 17-year-old entrepreneur with expertise in business development, Agentic AI, RAG applications, Voice agent AI-based software development, Web development, App development, and Cyber security. He is also the Co-founder and CTO at Frellectra AI.
@@ -79,6 +75,5 @@ def get_query_transformation_prompt():
         The query transformation prompt template.
     """
     return ChatPromptTemplate.from_messages([
-        SystemMessagePromptTemplate.from_template(QUERY_TRANSFORMATION_PROMPT),
-        HumanMessagePromptTemplate.from_template("{question}"),
+        HumanMessagePromptTemplate.from_template(QUERY_TRANSFORMATION_PROMPT),
     ])

@@ -33,5 +33,5 @@ def get_llm(model_name: str = "gemini-1.5-flash", temperature: float = 0.2):
         model=model_name,
         temperature=temperature,
         google_api_key=GEMINI_API_KEY,
-        convert_system_message_to_human=False,
+        convert_system_message_to_human=True,
     )
