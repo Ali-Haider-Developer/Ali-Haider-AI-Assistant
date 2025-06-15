@@ -1,6 +1,6 @@
 fastapi==0.109.2
 uvicorn==0.27.1
-pydantic==2.6.1
+pydantic==1.10.13
 python-multipart==0.0.9
 python-dotenv==1.0.1
 langchain==0.1.9
@@ -12,6 +12,7 @@ beautifulsoup4==4.12.3
 requests==2.31.0
 tiktoken==0.6.0
 websockets==12.0
-langsmith==0.1.22
+langsmith==0.0.77
 typing-extensions>=4.8.0
-starlette>=0.36.0 
+starlette>=0.36.0
+pydantic-settings==2.1.0 
